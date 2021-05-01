@@ -7,6 +7,10 @@ $("body").keypress(function() {
     levelUp();
 })
 
+$("body").on("tap", function() {
+    levelUp();
+})
+
 $("button").on("click", function(){
     clickedColor = $(this).attr("id");
     
