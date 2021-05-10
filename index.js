@@ -3,15 +3,14 @@ var round = 1;
 var arr = [];
 var counter = 0;
 
-$("body").keypress(function() {
+$(".btn").click(function() {
+    counter = 0;
+    round = 1;
+    arr = [];
     levelUp();
 })
 
-$("body").on("tap", function() {
-    levelUp();
-})
-
-$("button").on("click", function(){
+$(".align").on("click", function(){
     clickedColor = $(this).attr("id");
     
     $(this).fadeOut().fadeIn();
@@ -19,7 +18,7 @@ $("button").on("click", function(){
     audio.play();
 
     if(clickedColor!=arr[counter]){
-        $("h1").text("Game Over ! Press a key to start again.");
+        $("h1").text("Game Over ! Please start again.");
         counter = 0;
         round = 1;
         arr = [];
